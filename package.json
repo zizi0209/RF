@@ -1,171 +1,64 @@
 {
-  
+  "homepage": "https://zizi0209.github.io/RF",
   "name": "rosaflora",
-  
   "version": "0.1.0",
-  
   "private": true,
-  
   "dependencies": {
-  
-    
-  "@gsap/react": "^2.1.2",
-  
-    
-  "@heroui/image": "^2.2.6",
-  
-    
-  "@heroui/react": "^2.6.14",
-  
-    
-  "@react-spring/parallax": "^9.7.5",
-  
-    
-  "@tailwindcss/postcss": "^4.0.7",
-  
-    
-  "autoprefixer": "^10.4.20",
-  
-    
-  "cra-template": "1.2.0",
-  
-    
-  "framer-motion": "^12.4.3",
-  
-    
-  "gsap-trial": "^3.12.7",
-  
-    
-  "lenis": "^1.1.20",
-  
-    
-  "postcss": "^8.5.2",
-  
-    
-  "react": "^18.3.1",
-  
-    
-  "react-animated-cursor": "^2.11.2",
-  
-    
-  "react-dom": "^18.3.1",
-  
-    
-  "react-game-snake": "^1.0.4",
-  
-    
-  "react-parallax": "^3.5.1",
-  
-    
-  "react-router": "^7.1.5",
-  
-    
-  "react-router-dom": "^7.1.5",
-  
-    
-  "react-scripts": "5.0.1",
-  
-    
-  "react-scroll": "^1.9.3",
-  
-    
-  "react-scroll-to": "^3.0.0-beta.6",
-  
-    
-  "react-share": "^5.2.0",
-  
-    
-  "react-type-animation": "^3.2.0",
-  
-    
-  "swiper": "^11.2.4",
-  
-    
-  "web-vitals": "^4.2.4"
-  
+    "@gsap/react": "^2.1.2",
+    "@heroui/image": "^2.2.6",
+    "@heroui/react": "^2.6.14",
+    "@react-spring/parallax": "^9.7.5",
+    "@tailwindcss/postcss": "^4.0.7",
+    "autoprefixer": "^10.4.20",
+    "cra-template": "1.2.0",
+    "framer-motion": "^12.4.3",
+    "gsap-trial": "^3.12.7",
+    "lenis": "^1.1.20",
+    "postcss": "^8.5.2",
+    "react": "^18.3.1",
+    "react-animated-cursor": "^2.11.2",
+    "react-dom": "^18.3.1",
+    "react-game-snake": "^1.0.4",
+    "react-parallax": "^3.5.1",
+    "react-router": "^7.1.5",
+    "react-router-dom": "^7.1.5",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.3",
+    "react-scroll-to": "^3.0.0-beta.6",
+    "react-share": "^5.2.0",
+    "react-type-animation": "^3.2.0",
+    "swiper": "^11.2.4",
+    "web-vitals": "^4.2.4"
   },
-  
   "scripts": {
-  
-    
-  "start": "react-scripts start",
-  
-    
-  "build": "react-scripts build",
-  
-    
-  "test": "react-scripts test",
-  
-    
-  "eject": "react-scripts eject"
-  
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  
   "eslintConfig": {
-  
-    
-  "extends": [
-  
-    
-    
-  "react-app",
-  
-    
-    
-  "react-app/jest"
-  
-    
-  ]
-  
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  
   "browserslist": {
-  
-    
-  "production": [
-  
-    
-    
-  ">0.2%",
-  
-    
-    
-  "not dead",
-  
-    
-    
-  "not op_mini all"
-  
-    
-  ],
-  
-    
-  "development": [
-  
-    
-    
-  "last 1 chrome version",
-  
-    
-    
-  "last 1 firefox version",
-  
-    
-    
-  "last 1 safari version"
-  
-    
-  ]
-  
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  
   "devDependencies": {
-  
-    
-  "gh-pages": "^6.3.0",
-  
-    
-  "tailwindcss": "^3.4.17"
-  
+    "gh-pages": "^6.3.0",
+    "tailwindcss": "^3.4.17"
   }
 }
