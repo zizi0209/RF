@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/RF/static/css/main.487294fe.css",
+    "main.js": "/RF/static/js/main.9ed5fe42.js",
+    "static/js/488.27ce92d6.chunk.js": "/RF/static/js/488.27ce92d6.chunk.js",
+    "static/media/ump.png": "/RF/static/media/ump.7fdf315c33266eac30bb.png",
+    "static/media/books.png": "/RF/static/media/books.da80a852a3128e6d5f0c.png",
+    "static/media/status-update.png": "/RF/static/media/status-update.a0044e2c4a3586dab54a.png",
+    "static/media/shop.png": "/RF/static/media/shop.fe721493f5ef718397bb.png",
+    "static/media/other-artist.png": "/RF/static/media/other-artist.f57a4e1abd7e3f2d5ad9.png",
+    "static/media/bt.jpg": "/RF/static/media/bt.a2140b6a1613ea5e28e0.jpg",
+    "static/media/idnadl.jpg": "/RF/static/media/idnadl.1e1d292d5b06e75b8907.jpg",
+    "static/media/milk.png": "/RF/static/media/milk.a9bcdd1042c1502fa970.png",
+    "static/media/draw.png": "/RF/static/media/draw.8cb8a2d5e5a8d138b172.png",
+    "static/media/RF.svg": "/RF/static/media/RF.fcb3196c776444341f29eeb09b157465.svg",
+    "static/media/music.png": "/RF/static/media/music.b7658d282d7121a75033.png",
+    "index.html": "/RF/index.html",
+    "main.487294fe.css.map": "/RF/static/css/main.487294fe.css.map",
+    "main.9ed5fe42.js.map": "/RF/static/js/main.9ed5fe42.js.map",
+    "488.27ce92d6.chunk.js.map": "/RF/static/js/488.27ce92d6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.487294fe.css",
+    "static/js/main.9ed5fe42.js"
+  ]
+}
