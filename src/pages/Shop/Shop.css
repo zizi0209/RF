@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Comfortaa", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  background: purple;
+  color: white;
+}
+
+.shop-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  margin: 5vw;
+}
+
+.src-txt, .top-txt {
+  position: relative;
+}
+
+.top-txt {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.shop-description {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+

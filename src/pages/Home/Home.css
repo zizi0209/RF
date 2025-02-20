@@ -1,0 +1,519 @@
+/* MAIN RULES - className="h1 hero-title"
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section-hero .h1 {
+  font-size: 20vmin;
+  line-height: 0.9;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 10px #1a1423;
+}
+/* .section-hero ~ .section {
+  position: relative;
+  z-index: 2;
+} */
+
+/* added */
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+small {
+  font-size: medium;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #483c32;
+}
+
+section a {
+  text-decoration: underline;
+}
+
+/* img */
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@property --i {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+.contact-info img {
+  width: 30%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 30px;
+  border: 5px solid #ccc;
+  padding: 10px; /* control the gap */
+  mask: conic-gradient(#000 0 0) content-box,
+    linear-gradient(
+        calc(mod(var(--a), 180deg) * var(--i) + var(--_a, 45deg)),
+        #0000 30%,
+        #000 40% 60%,
+        #0000 70%
+      )
+      subtract,
+    conic-gradient(#000 0 0) padding-box;
+  transition: --i 0.5s, --a 0s 0.5s;
+  cursor: pointer;
+}
+.contact-info img.alt {
+  --_a: -45deg;
+}
+.contact-info img:hover {
+  --i: 1;
+  --a: 15turn;
+  transition: --i 0s, --a 30s linear;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.contact-item {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contact-item:nth-child(2n) {
+  justify-content: flex-end;
+}
+
+/* phần nội dung của home */
+.home-page {
+  padding: 0 15vw 0 15vw;
+}
+
+/* css các social-button (btnShare) */
+.Demo__container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, 30px);
+  max-width: 400px;
+  margin: 0 auto;
+}
+.Demo__some-network {
+  text-align: center;
+}
+.Demo__some-network__share-count {
+  display: inline-flex;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: visible;
+  width: 0;
+  font-size: 14px;
+}
+.Demo__some-network__share-button {
+  cursor: pointer;
+}
+.Demo__some-network__share-button:hover:not(:active) {
+  opacity: 0.75;
+}
+
+/* container Fluid */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://unpkg.com/normalize.css") layer(normalize);
+@layer normalize, base, demo;
+@layer demo {
+  .container-fluid {
+    --font-level: 8;
+    opacity: 0;
+    height: 3lh;
+    display: flex;
+    place-items: center;
+    mask: linear-gradient(
+      #0000 0.25lh,
+      #9dc183 calc(50% - 0.5lh) calc(50% + 0.5lh),
+      #0000 calc(100% - 0.25lh)
+    );
+    /* color: color-mix(in lch, canvasText, canvas 15%); */
+    color: #c9a25b;
+    text-align: center;
+    position: relative;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    height: 1lh;
+    display: inline-grid;
+    flex-direction: column;
+    position: relative;
+    padding-inline: 0.25em;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .indicator {
+    --c: 0.175em;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 1lh;
+    translate: -50% -50%;
+    border: 0.05em solid oklch(0.75 1 var(--h, 320));
+    transition: width 0.25s, border-color 0.25s;
+    width: calc((var(--width) * 1px) + var(--c));
+    /* alternative: mask-composite */
+    clip-path: polygon(
+      /* top left corner */ 0 0,
+      var(--c) 0,
+      var(--c) var(--c),
+      0 var(--c),
+      0 100%,
+      /* bottom left corner */ 0 calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)),
+      var(--c) 100%,
+      0 100%,
+      /* bottom right corner */ calc(100% - var(--c)) 100%,
+      calc(100% - var(--c)) calc(100% - var(--c)),
+      100% calc(100% - var(--c)),
+      100% 100%,
+      /* top right corner */ 100% var(--c),
+      calc(100% - var(--c)) var(--c),
+      calc(100% - var(--c)) 0,
+      100% 0,
+      /* back to the start */ 100% 100%,
+      0 100%
+    );
+  }
+
+  li {
+    display: inline-block;
+    width: fit-content;
+    height: 1lh;
+    grid-area: 1 / 1;
+    line-height: 1.2;
+  }
+}
+@layer base {
+  :root {
+    --font-size-min: 16;
+    --font-size-max: 20;
+    --font-ratio-min: 1.2;
+    --font-ratio-max: 1.33;
+    --font-width-min: 375;
+    --font-width-max: 1500;
+  }
+
+  html {
+    color-scheme: light dark;
+  }
+
+  [data-theme="light"] {
+    color-scheme: light only;
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark only;
+  }
+
+  :where(.fluid) {
+    --fluid-min: calc(
+      var(--font-size-min) * pow(var(--font-ratio-min), var(--font-level, 0))
+    );
+    --fluid-max: calc(
+      var(--font-size-max) * pow(var(--font-ratio-max), var(--font-level, 0))
+    );
+    --fluid-preferred: calc(
+      (var(--fluid-max) - var(--fluid-min)) /
+        (var(--font-width-max) - var(--font-width-min))
+    );
+    --fluid-type: clamp(
+      (var(--fluid-min) / 16) * 1rem,
+      ((var(--fluid-min) / 16) * 1rem) -
+        (((var(--fluid-preferred) * var(--font-width-min)) / 16) * 1rem) +
+        (var(--fluid-preferred) * var(--variable-unit, 100vi)),
+      (var(--fluid-max) / 16) * 1rem
+    );
+    font-size: var(--fluid-type);
+  }
+
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
+      Helvetica, Arial, sans-serif, system-ui;
+  }
+
+  body::before {
+    --size: 45px;
+    --line: color-mix(in hsl, canvasText, transparent 70%);
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: linear-gradient(
+          90deg,
+          var(--line) 1px,
+          transparent 1px var(--size)
+        )
+        50% 50% / var(--size) var(--size),
+      linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
+        var(--size) var(--size);
+    mask: linear-gradient(-20deg, transparent 50%, #9dc183);
+    top: 0;
+    transform-style: flat;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .bear-link {
+    color: canvasText;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: 48px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    opacity: 0.8;
+  }
+
+  :where(.x-link, .bear-link):is(:hover, :focus-visible) {
+    opacity: 1;
+  }
+
+  .bear-link svg {
+    width: 75%;
+  }
+
+  /* Utilities */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* img for Fav song */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+.swiper-list-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9DC183;
+  min-height: 80vh;
+  overflow: hidden;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  width: min(900px, 100%);
+  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  padding: 0 35px;
+  text-align: justify;
+}
+.info p {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.btn {
+  display: block;
+  padding: 10px 40px;
+  margin: 10px auto;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  outline: none;
+  text-decoration: none;
+  color: #E97451;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+.btn:hover {
+  animation: gelatine 0.5s 1;
+}
+@keyframes gelatine {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+/* SWIPER */
+.swiper {
+  width: 350px;
+  height: 320px;
+  padding: 50px 0;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #E97451;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-position {
+  object-position: 50% 0%;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0f2027, transparent, transparent);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overlay span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  padding: 7px 18px;
+  margin: 10px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.095);
+  box-shadow: inset 2px -2px 20px rgba(214, 214, 214, 0.2),
+    inset -3px 3px 3px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(74px);
+}
+.overlay h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 0 0 20px 20px;
+}
+@media (max-width: 750px) {
+  .content {
+     flex-direction: column-reverse;
+  }
+  .btn {
+    margin: 10px auto 40px;
+  }
+}
+
+/* padding, margin for .swiper-list-img */
+.swiper-list-img{
+  margin: 3vw;
+  padding: 5vw;
+}
+
+
+/* css NewLetter */
+.newsletter{
+  line-height: 10vh;
+
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: medium;
+  padding: 80px 50px;
+  text-align: justify;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+.newsletter p{
+  margin: 3vh;
+
+  color: #131313;
+    letter-spacing: .15em;
+    text-shadow: 
+      1px -1px 0 #767676, 
+      -1px 2px 1px #737272, 
+      -2px 4px 1px #767474, 
+      -3px 6px 1px #787777, 
+      -4px 8px 1px #7b7a7a, 
+      -5px 10px 1px #7f7d7d, 
+      -6px 12px 1px #828181, 
+      -8px 14px 1px #808000;
+}
+
+
+/* btn Join with me */
+.btn{
+  z-index: 10;
+  padding: 15px;
+}

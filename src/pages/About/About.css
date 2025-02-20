@@ -1,0 +1,88 @@
+/* MAIN RULES - className="h1 hero-title"
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section-hero .h1 {
+  font-size: 20vmin;
+  line-height: 0.9;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 10px #1a1423;
+}
+.section-hero ~ .section {
+  position: relative;
+  z-index: 2;
+}
+
+/*tự custom */
+.section-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: larger;
+}
+.Demo__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Demo__some-network__share-button {
+  margin-right: 1rem;
+}
+.Demo__some-network__share-button:last-child {
+  margin-right: 0;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  padding: 2rem;
+  cursor: pointer;
+  color: #fdfdb8;
+}
+
+/* bong bóng - canvas */
+#webgl-canvas {
+  position: fixed;
+  overflow: hidden;
+  z-index: -10;
+
+  /* justify-items: end; */
+  align-items: center;
+  left: 0;
+  top: 0;
+}
+
+.about-text {
+  text-align: center;
+}
+
+/* .newsletter-inset-shadow */
+.newsletter-inset-shadow {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+    "AppleGothic", sans-serif;
+  font-size: 3rem;
+  padding: 80px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+.newsletter-inset-shadow p {
+  color: #202020;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+}
+
+/* .material-symbols-outlined - thêm hiệu ứng lướt xuống khi ấn*/
